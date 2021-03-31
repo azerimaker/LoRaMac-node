@@ -277,9 +277,12 @@ int main( void )
                     &appVersion,
                     &gitHubVersion );
 
+    printf( "GNTE Test initialized....\n\r" );
+
+
     if ( LmHandlerInit( &LmHandlerCallbacks, &LmHandlerParams ) != LORAMAC_HANDLER_SUCCESS )
     {
-        printf( "LoRaMac wasn't properly initialized\n" );
+        printf( "LoRaMac wasn't properly initialized\n\r" );
         // Fatal error, endless loop.
         while ( 1 )
         {

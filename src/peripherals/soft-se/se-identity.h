@@ -66,12 +66,12 @@ extern "C" {
  * When set to 1 DevEui is LORAWAN_DEVICE_EUI
  * When set to 0 DevEui is automatically set with a value provided by MCU platform
  */
-#define STATIC_DEVICE_EUI                                  0
+#define STATIC_DEVICE_EUI                                  1
 
 /*!
  * end-device IEEE EUI (big endian)
  */
-#define LORAWAN_DEVICE_EUI                                 { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 }
+#define LORAWAN_DEVICE_EUI                                 { 0x00, 0x04, 0xA3, 0x10, 0x00, 0x1A, 0xAE, 0x9B}
 
 /*!
  * App/Join server IEEE EUI (big endian)
@@ -103,8 +103,7 @@ extern "C" {
              * WARNING: FOR 1.0.x DEVICES IT IS THE \ref LORAWAN_GEN_APP_KEY                                        \
              */                                                                                                     \
             .KeyID    = APP_KEY,                                                                                    \
-            .KeyValue = { 0x2B, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6, 0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, \
-                          0x3C },                                                                                   \
+            .KeyValue = { 0xD0, 0x4C, 0x97, 0x12, 0xED, 0x3F, 0xFC, 0x39, 0xCB, 0x75, 0xA5, 0x6F, 0xD9, 0x50, 0x9E, 0xB7},                                                                                   \
         },                                                                                                          \
         {                                                                                                           \
             /*!                                                                                                     \
@@ -112,8 +111,7 @@ extern "C" {
              * WARNING: FOR 1.0.x DEVICES IT IS THE \ref LORAWAN_APP_KEY                                            \
              */                                                                                                     \
             .KeyID    = NWK_KEY,                                                                                    \
-            .KeyValue = { 0x2B, 0x7E, 0x15, 0x16, 0x28, 0xAE, 0xD2, 0xA6, 0xAB, 0xF7, 0x15, 0x88, 0x09, 0xCF, 0x4F, \
-                          0x3C },                                                                                   \
+            .KeyValue = { 0xD0, 0x4C, 0x97, 0x12, 0xED, 0x3F, 0xFC, 0x39, 0xCB, 0x75, 0xA5, 0x6F, 0xD9, 0x50, 0x9E, 0xB7},                                                                                   \
         },                                                                                                          \
         {                                                                                                           \
             /*!                                                                                                     \
