@@ -50,11 +50,11 @@ extern "C"
 /*!
  * Board MCU pins definitions
  */
-#define RADIO_RESET                                 PA_0
+#define RADIO_RESET                                 PB_9
 
-#define RADIO_MOSI                                  PA_7
-#define RADIO_MISO                                  PA_6
-#define RADIO_SCLK                                  PA_5
+#define RADIO_MOSI                                  PB_5
+#define RADIO_MISO                                  PB_4
+#define RADIO_SCLK                                  PB_3
 
 #if defined( SX1261MBXBAS ) || defined( SX1262MBXCAS ) || defined( SX1262MBXDAS )
 
@@ -76,16 +76,19 @@ extern "C"
 
 #elif defined( LR1110MB1XXS )
 
-#define RADIO_NSS                                   PA_8
-#define RADIO_BUSY                                  PB_3
-#define RADIO_DIO_1                                 PB_4
+#define RADIO_NSS                                   PA_4
+#define RADIO_BUSY                                  PB_10
+#define RADIO_DIO_1                                 PB_8
 
-#define LED_1                                       PC_1
-#define LED_2                                       PC_0
+#define LED_1                                       PA_6
+#define LED_2                                       PA_7
+#define LED_3                                       PB_0
+
+//#define RADIO_ANT_SWITCH_POWER                      
 
 // Debug pins definition.
-#define RADIO_DBG_PIN_TX                            PB_6
-#define RADIO_DBG_PIN_RX                            PC_7
+#define RADIO_DBG_PIN_TX                            PA_11
+#define RADIO_DBG_PIN_RX                            PA_12
 
 #elif defined( SX1272MB2DAS) || defined( SX1276MB1LAS ) || defined( SX1276MB1MAS )
 
@@ -118,8 +121,8 @@ extern "C"
 #define SWCLK                                       PA_14
 #define SWDAT                                       PA_13
 
-#define I2C_SCL                                     PB_8
-#define I2C_SDA                                     PB_9
+#define I2C_SCL                                     PB_6
+#define I2C_SDA                                     PB_7
 
 #define UART_TX                                     PA_2
 #define UART_RX                                     PA_3

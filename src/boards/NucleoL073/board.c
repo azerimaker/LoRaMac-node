@@ -56,6 +56,7 @@
  */
 Gpio_t Led1;
 Gpio_t Led2;
+Gpio_t Led3;
 
 /*
  * MCU objects
@@ -123,8 +124,9 @@ void BoardInitMcu( void )
         HAL_Init( );
 
         // LEDs
-        GpioInit( &Led1, LED_1, PIN_OUTPUT, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
-        GpioInit( &Led2, LED_2, PIN_OUTPUT, PIN_PUSH_PULL, PIN_NO_PULL, 0 );
+        GpioInit( &Led1, LED_1, PIN_OUTPUT, PIN_PUSH_PULL, PIN_NO_PULL, 1 );
+        GpioInit( &Led2, LED_2, PIN_OUTPUT, PIN_PUSH_PULL, PIN_NO_PULL, 1 );
+        GpioInit( &Led3, LED_3, PIN_OUTPUT, PIN_PUSH_PULL, PIN_NO_PULL, 1 );
         
         // GpioWrite( &Led3, 0 );
 
